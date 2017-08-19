@@ -21,11 +21,11 @@ app.get('/artical-one', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'artical-one.html'));
 });
 
-app.get('/artical-one', function (req, res) {
+app.get('/artical-two', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'artical-two.html'));
 });
 
-app.get('/artical-one', function (req, res) {
+app.get('/artical-three', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));
 });
 
