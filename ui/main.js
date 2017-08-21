@@ -1,4 +1,4 @@
 console.log('Loaded!');
 
-var element = document.getElementById('main-text');
-element.innerHTML = 'RAPH';
+var ele = document.getElementById('main-text');
+ele.innerHTML = 'RAPH';
