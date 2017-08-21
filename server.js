@@ -101,13 +101,6 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/:articalName', function (req, res) {
-    // articalName=artical-one
-    var articalName = req.params.articalName;
-    res.send(createTemplate(articals[articalName]));
-});
-
-
 var names = [];
 app.get('/submit-name/:name', function(req, res){ // URL: /submit-name?name=xxxx
    // Get the name from the request
@@ -118,6 +111,14 @@ app.get('/submit-name/:name', function(req, res){ // URL: /submit-name?name=xxxx
    res.send(JSON.stringify(names));
    
 });
+app.get('/:articalName', function (req, res) {
+    // articalName=artical-one
+    var articalName = req.params.articalName;
+    res.send(createTemplate(articals[articalName]));
+});
+
+
+
 
 
 
