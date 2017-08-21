@@ -73,7 +73,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/artical-one', function (req, res) {
-    res.send(createTemplate(articalOne));
+    res.send(createTemplate(articalone));
 });
 
 app.get('/artical-two', function (req, res) {
