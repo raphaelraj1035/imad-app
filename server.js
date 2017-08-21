@@ -6,23 +6,41 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articalOne = {
-    title: 'Artical One | Raphael',
-    heading: 'Artical One',
-    date: 'Sep 5, 2016',
-    content:`<p>
-                 This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical.
-            </p>
-            <p>
-                                This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
-            </p>
-                            <p>
-                                This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
-                            </p>` 
+var articles = {
+    artical-one : {
+        title: 'Artical One | Raphael',
+        heading: 'Artical One',
+        date: 'Sep 5, 2016',
+        content:`<p>
+                     This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical.
+                </p>
+                <p>
+                                    This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
+                </p>
+                                <p>
+                                    This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
+                                </p>` 
             
                    
                 
+},
+    artical-two :{
+        title: 'Artical Two | Raphael',
+        heading: 'Artical Two',
+        date: 'Sep 10, 2016',
+        content:`<p> Second article is coming soon
+                     </p>` 
+    },
+    artical-three : {
+        title: 'Artical One | Raphael',
+        heading: 'Artical Three',
+        date: 'Sep 25, 2016',
+        content:`<p>
+                     Third artical coming soon in few min
+                                </p>` 
+    }
 };
+
 
 function createTemplate (data) {
     var title = data.title;
@@ -73,17 +91,12 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/artical-one', function (req, res) {
-    res.send(createTemplate(articalOne));
+app.get('/:articalName', function (req, res) {
+    // articalName=artical-one
+    res.send(createTemplate(articals[articalName]));
 });
 
-app.get('/artical-two', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'artical-two.html'));
-});
 
-app.get('/artical-three', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));
-});
 
 
 
