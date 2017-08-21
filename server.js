@@ -10,8 +10,7 @@ var articalOne = {
     title: 'Artical One | Raphael',
     heading: 'Artical One',
     date: 'Sep 5, 2016',
-    content: 
-            '<p>
+    content:`<p>
                  This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical.
             </p>
             <p>
@@ -19,7 +18,8 @@ var articalOne = {
             </p>
                             <p>
                                 This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
-                            </p>' 
+                            </p>` 
+            
                    
                 
 };
@@ -30,7 +30,7 @@ function createTemplate (data) {
     var heading = data.heading;
     var content = data.content;
     
-var htmlTemplate = '
+var htmlTemplate = `
 <html>
     <head>
         <title>
@@ -57,7 +57,7 @@ var htmlTemplate = '
         </div>
     </body>
 </html>
-';
+`;
 return htmlTemplate;
 } 
 
