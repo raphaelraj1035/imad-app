@@ -87,7 +87,17 @@ var counter = 0;
 app.get('/counter', function (req, res){
     counter = counter + 1;
     res.send(counter.toString());
-})
+});
+var names = [];
+app.get('/submit-name/:name', function(req, res){ // URL: /submit-name?name=xxxx
+   // Get the name from the request
+   var name = req.query.name;
+   
+   names.push(name);
+   // JSON: Javascript object notation
+   res.send(JSON.stringify(names));
+   
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -101,16 +111,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names = [];
-app.get('/submit-name/:name', function(req, res){ // URL: /submit-name?name=xxxx
-   // Get the name from the request
-   var name = req.query.name;
-   
-   names.push(name);
-   // JSON: Javascript object notation
-   res.send(JSON.stringify(names));
-   
-});
+
 app.get('/:articalName', function (req, res) {
     // articalName=artical-one
     var articalName = req.params.articalName;
