@@ -10,16 +10,17 @@ var articalOne = {
     title: 'Artical One | Raphael',
     heading: 'Artical One',
     date: 'Sep 5, 2016',
-    content: ' 
-                <p>
-                    This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
-                </p>
-                <p>
-                    This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
-                </p>
-                <p>
-                    This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
-                </p>'
+    content: 
+            '<p>
+                 This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical.
+            </p>
+            <p>
+                                This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
+            </p>
+                            <p>
+                                This is the content for my first articalThis is the content for my first artical This is the content for my first articalThis is the content for my first articalThis is the content for my first articalThis is the content for my first artical This is the content for my first artical This is the content for my first artical
+                            </p>' 
+                   
                 
 };
 
