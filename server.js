@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 
 var content = {
-    title: 'Article One | Raphael',
-    heading: 'Article One',
+    title: 'Artical One | Raphael',
+    heading: 'Artical One',
     date: 'Sep 5, 2016',
     content: ' 
                 <p>
@@ -73,7 +73,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/artical-one', function (req, res) {
-    res.send(createTemplate(artical-one));
+    res.send(createTemplate(ArticalOne));
 });
 
 app.get('/artical-two', function (req, res) {
